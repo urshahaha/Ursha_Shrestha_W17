@@ -1,0 +1,94 @@
+{
+  "metrics": {
+    "mode": "offline",
+    "normal_task_completion_rate": 1.0,
+    "overall_completion_rate_including_injected_failure": 0.8,
+    "tool_call_correctness": 1.0,
+    "average_trajectory_length": 4.6,
+    "total_tokens_all_queries": 0,
+    "note": "Offline mode uses a scripted model test double, so no LLM API tokens are consumed. Run --mode live with an API key for provider-reported token usage."
+  },
+  "queries": [
+    {
+      "case": "basic_rag",
+      "status": "complete",
+      "task_completed": true,
+      "tool_calls_correct": true,
+      "iterations": 4,
+      "total_tokens": 0,
+      "actions": [
+        "search",
+        "draft",
+        "verify",
+        "finish"
+      ]
+    },
+    {
+      "case": "adaptive_second_search",
+      "status": "complete",
+      "task_completed": true,
+      "tool_calls_correct": true,
+      "iterations": 5,
+      "total_tokens": 0,
+      "actions": [
+        "search",
+        "search",
+        "draft",
+        "verify",
+        "finish"
+      ]
+    },
+    {
+      "case": "calculator_tool",
+      "status": "complete",
+      "task_completed": true,
+      "tool_calls_correct": true,
+      "iterations": 4,
+      "total_tokens": 0,
+      "actions": [
+        "calculator",
+        "draft",
+        "verify",
+        "finish"
+      ]
+    },
+    {
+      "case": "document_tool",
+      "status": "complete",
+      "task_completed": true,
+      "tool_calls_correct": true,
+      "iterations": 4,
+      "total_tokens": 0,
+      "actions": [
+        "list_documents",
+        "draft",
+        "verify",
+        "finish"
+      ]
+    },
+    {
+      "case": "failure_injection_search_unavailable",
+      "status": "max_steps",
+      "task_completed": false,
+      "tool_calls_correct": true,
+      "iterations": 6,
+      "total_tokens": 0,
+      "actions": [
+        "search",
+        "draft",
+        "verify",
+        "verify",
+        "verify",
+        "verify"
+      ]
+    }
+  ],
+  "failure_log": [
+    {
+      "case": "failure_injection_search_unavailable",
+      "classification": "soft failure",
+      "status": "max_steps",
+      "note": "Injected search-tool outage was recognized; no confident answer was returned."
+    }
+  ]
+}

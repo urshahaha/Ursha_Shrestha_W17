@@ -1,0 +1,26 @@
+[
+  {
+    "prompt_version": "v1",
+    "task_completion_rate": 0.75,
+    "tool_call_correctness": 0.5,
+    "average_trajectory_length": 5.0,
+    "token_usage": 0,
+    "regression_test_pass_rate": "NOT_RUN_LLM_JUDGE"
+  },
+  {
+    "prompt_version": "v2",
+    "task_completion_rate": 1.0,
+    "tool_call_correctness": 0.5,
+    "average_trajectory_length": 4.75,
+    "token_usage": 0,
+    "regression_test_pass_rate": "NOT_RUN_LLM_JUDGE"
+  },
+  {
+    "prompt_version": "v3",
+    "task_completion_rate": 1.0,
+    "tool_call_correctness": 1.0,
+    "average_trajectory_length": 4.25,
+    "token_usage": 0,
+    "regression_test_pass_rate": "NOT_RUN_LLM_JUDGE"
+  }
+]

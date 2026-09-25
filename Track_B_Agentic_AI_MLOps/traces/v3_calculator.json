@@ -1,0 +1,53 @@
+{
+  "version": "v3",
+  "case": "calculator",
+  "query": "Calculate 25 * 16.",
+  "status": "complete",
+  "iterations": 4,
+  "total_tokens": 0,
+  "answer": "25 * 16 = 400",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "calculator",
+      "tool_arguments": "25 * 16",
+      "raw_result": {
+        "expression": "25 * 16",
+        "result": "400"
+      },
+      "model_decision_reason": "Arithmetic routes directly to calculator.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "Specialized tool result is sufficient for drafting.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": true,
+        "reason": "All requested facts supported.",
+        "suggested_query": "Calculate 25 * 16."
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "tool": "finish",
+      "tool_arguments": {},
+      "raw_result": {},
+      "model_decision_reason": "Verification passed.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "complete"
+}

@@ -1,0 +1,52 @@
+{
+  "version": "v3",
+  "case": "documents",
+  "query": "What documents are available?",
+  "status": "complete",
+  "iterations": 4,
+  "total_tokens": 0,
+  "answer": "Available documents: none",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "list_documents",
+      "tool_arguments": {},
+      "raw_result": {
+        "count": 0
+      },
+      "model_decision_reason": "File-list request routes directly to list_documents.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "Specialized tool result is sufficient for drafting.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": true,
+        "reason": "All requested facts supported.",
+        "suggested_query": "What documents are available?"
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "tool": "finish",
+      "tool_arguments": {},
+      "raw_result": {},
+      "model_decision_reason": "Verification passed.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "complete"
+}

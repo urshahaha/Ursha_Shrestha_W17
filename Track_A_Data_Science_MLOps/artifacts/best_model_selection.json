@@ -1,0 +1,34 @@
+{
+  "selection_rule": "highest F1, ROC-AUC as tie-breaker",
+  "best_model": "random_forest",
+  "metrics": [
+    {
+      "model": "random_forest",
+      "accuracy": 0.7544357700496807,
+      "precision": 0.5256410256410257,
+      "recall": 0.767379679144385,
+      "f1": 0.6239130434782608,
+      "roc_auc": 0.8410537601074685,
+      "mlflow_run_id": "4f5533a22d6b4b98a65ccc233ca75a58"
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.7381121362668559,
+      "precision": 0.504302925989673,
+      "recall": 0.7834224598930482,
+      "f1": 0.6136125654450262,
+      "roc_auc": 0.8412978893797307,
+      "mlflow_run_id": "0259bc7823634527b06f5f1b55271ebb"
+    },
+    {
+      "model": "gradient_boosting",
+      "accuracy": 0.8055358410220014,
+      "precision": 0.676056338028169,
+      "recall": 0.5133689839572193,
+      "f1": 0.5835866261398176,
+      "roc_auc": 0.845463587279444,
+      "mlflow_run_id": "ee37f6c228c747049e1da53476056a75"
+    }
+  ],
+  "mlflow_available": true
+}

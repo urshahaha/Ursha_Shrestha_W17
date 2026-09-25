@@ -1,0 +1,10 @@
+{
+  "status": "registered",
+  "name": "TelcoChurnBestModel",
+  "version": 1,
+  "run_id": "4f5533a22d6b4b98a65ccc233ca75a58",
+  "stage_transitions": [
+    "Staging",
+    "Production"
+  ]
+}

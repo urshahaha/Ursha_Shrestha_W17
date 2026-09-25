@@ -1,0 +1,4 @@
+prompt_version,task_completion_rate,tool_call_correctness,average_trajectory_length,token_usage,regression_test_pass_rate
+v1,0.75,0.5,5.0,0,NOT_RUN_LLM_JUDGE
+v2,1.0,0.5,4.75,0,NOT_RUN_LLM_JUDGE
+v3,1.0,1.0,4.25,0,NOT_RUN_LLM_JUDGE

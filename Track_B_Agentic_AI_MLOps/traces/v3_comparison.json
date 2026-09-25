@@ -1,0 +1,64 @@
+{
+  "version": "v3",
+  "case": "comparison",
+  "query": "Compare the return window with the refund processing time.",
+  "status": "complete",
+  "iterations": 5,
+  "total_tokens": 0,
+  "answer": "After an approved return reaches the warehouse, refunds are normally processed within 5 to 7 business days. Bank processing time may add additional delay. Customers may request a standard return within 30 days of delivery. Items should be unused and returned with the original packaging when possible.",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search",
+      "tool_arguments": "return policy",
+      "raw_result": {
+        "query": "return policy",
+        "results_kept": 1
+      },
+      "model_decision_reason": "Need return evidence.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "tool_arguments": "refund timing",
+      "raw_result": {
+        "query": "refund timing",
+        "results_kept": 2
+      },
+      "model_decision_reason": "Need refund evidence too.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "Draft from available evidence/tool output.",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": true,
+        "reason": "All requested facts supported.",
+        "suggested_query": "refund timing"
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "tool": "finish",
+      "tool_arguments": {},
+      "raw_result": {},
+      "model_decision_reason": "Verification passed.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "complete"
+}

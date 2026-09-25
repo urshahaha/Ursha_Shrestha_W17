@@ -1,0 +1,78 @@
+{
+  "version": "v1",
+  "case": "comparison",
+  "query": "Compare the return window with the refund processing time.",
+  "status": "max_steps",
+  "iterations": 6,
+  "total_tokens": 0,
+  "answer": "I could not produce a verified answer within the allowed steps. Please clarify the question or make the retrieval tool available.",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search",
+      "tool_arguments": "Compare the return window with the refund processing time.",
+      "raw_result": {
+        "query": "Compare the return window with the refund processing time.",
+        "results_kept": 1
+      },
+      "model_decision_reason": "v1 performs one generic search and assumes it is enough.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "v1 drafts after the first partial result.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": false,
+        "reason": "Comparison is missing one requested fact.",
+        "suggested_query": "refund timing"
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": false
+    },
+    {
+      "step": 4,
+      "tool": "search",
+      "tool_arguments": "refund timing",
+      "raw_result": {
+        "query": "refund timing",
+        "results_kept": 1
+      },
+      "model_decision_reason": "Missing support; search again.",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "tool": "search",
+      "tool_arguments": "refund timing",
+      "raw_result": {
+        "query": "refund timing",
+        "results_kept": 1
+      },
+      "model_decision_reason": "Missing support; search again.",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "tool": "search",
+      "tool_arguments": "refund timing",
+      "raw_result": {
+        "query": "refund timing",
+        "results_kept": 1
+      },
+      "model_decision_reason": "Missing support; search again.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "max_steps"
+}

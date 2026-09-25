@@ -1,0 +1,32 @@
+[
+  {
+    "id": "return_window",
+    "query": "What is the standard return window?",
+    "golden_answer": "Customers may request a standard return within 30 days of delivery. Items should be unused and returned with the original packaging when possible.",
+    "expected_tool": "search"
+  },
+  {
+    "id": "refund_timing",
+    "query": "How long do refunds normally take after an approved return reaches the warehouse?",
+    "golden_answer": "Refunds are normally processed within 5 to 7 business days after the approved return reaches the warehouse. Bank processing time may add delay.",
+    "expected_tool": "search"
+  },
+  {
+    "id": "shipping_timing",
+    "query": "How long does standard shipping take after dispatch?",
+    "golden_answer": "Standard shipping normally takes 3 to 5 business days after dispatch.",
+    "expected_tool": "search"
+  },
+  {
+    "id": "calculator",
+    "query": "Calculate 25 * 16.",
+    "golden_answer": "25 * 16 = 400",
+    "expected_tool": "calculator"
+  },
+  {
+    "id": "document_listing",
+    "query": "What documents are available?",
+    "golden_answer": "Use the document-listing tool to report the uploaded filenames.",
+    "expected_tool": "list_documents"
+  }
+]

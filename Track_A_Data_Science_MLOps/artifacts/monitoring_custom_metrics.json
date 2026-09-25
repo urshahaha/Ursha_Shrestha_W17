@@ -1,0 +1,11 @@
+{
+  "reference_rows": 4930,
+  "current_rows": 2113,
+  "injected_drift": [
+    "MonthlyCharges + Normal(18,4)",
+    "35% current rows forced to Month-to-month Contract"
+  ],
+  "custom_metric_mean_monthlycharges_shift": 17.392716657821083,
+  "reference_churn_rate": 0.2695740365111562,
+  "current_churn_rate": 0.2555608140085187
+}

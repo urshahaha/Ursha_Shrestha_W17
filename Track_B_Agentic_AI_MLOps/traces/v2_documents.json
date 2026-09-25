@@ -1,0 +1,63 @@
+{
+  "version": "v2",
+  "case": "documents",
+  "query": "What documents are available?",
+  "status": "complete",
+  "iterations": 5,
+  "total_tokens": 0,
+  "answer": "Available documents: none",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search",
+      "tool_arguments": "What documents are available?",
+      "raw_result": {
+        "query": "What documents are available?",
+        "results_kept": 1
+      },
+      "model_decision_reason": "v2 tries retrieval before choosing the specialized tool.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "list_documents",
+      "tool_arguments": {},
+      "raw_result": {
+        "count": 0
+      },
+      "model_decision_reason": "Document listing is required.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "Specialized tool result is sufficient for drafting.",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": true,
+        "reason": "All requested facts supported.",
+        "suggested_query": "What documents are available?"
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "tool": "finish",
+      "tool_arguments": {},
+      "raw_result": {},
+      "model_decision_reason": "Verification passed.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "complete"
+}

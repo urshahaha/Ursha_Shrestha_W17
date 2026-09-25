@@ -1,0 +1,11 @@
+ShopAssist Demo Knowledge Base
+
+Returns: Customers may request a standard return within 30 days of delivery. Items should be unused and returned with the original packaging when possible.
+
+Refunds: After an approved return reaches the warehouse, refunds are normally processed within 5 to 7 business days. Bank processing time may add additional delay.
+
+Shipping: Standard shipping normally takes 3 to 5 business days after dispatch. Express shipping normally takes 1 to 2 business days after dispatch.
+
+Account security: Customers should never share passwords or one-time verification codes with support agents. Password resets should be completed through the secure reset flow.
+
+Escalation: Payment disputes, suspected fraud, and account-security incidents should be escalated for human review.

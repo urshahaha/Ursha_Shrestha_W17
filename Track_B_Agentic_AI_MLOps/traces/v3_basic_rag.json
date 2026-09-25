@@ -1,0 +1,53 @@
+{
+  "version": "v3",
+  "case": "basic_rag",
+  "query": "How long does standard shipping take after dispatch?",
+  "status": "complete",
+  "iterations": 4,
+  "total_tokens": 0,
+  "answer": "Standard shipping normally takes 3 to 5 business days after dispatch. Express shipping normally takes 1 to 2 business days after dispatch.",
+  "trace": [
+    {
+      "step": 1,
+      "tool": "search",
+      "tool_arguments": "How long does standard shipping take after dispatch?",
+      "raw_result": {
+        "query": "How long does standard shipping take after dispatch?",
+        "results_kept": 1
+      },
+      "model_decision_reason": "Need evidence.",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "tool": "draft",
+      "tool_arguments": {},
+      "raw_result": {
+        "grounded_claim": true
+      },
+      "model_decision_reason": "Draft from available evidence/tool output.",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "tool": "verify",
+      "tool_arguments": {},
+      "raw_result": {
+        "supported": true,
+        "reason": "All requested facts supported.",
+        "suggested_query": "How long does standard shipping take after dispatch?"
+      },
+      "model_decision_reason": "Verify before finish.",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "tool": "finish",
+      "tool_arguments": {},
+      "raw_result": {},
+      "model_decision_reason": "Verification passed.",
+      "ok": true
+    }
+  ],
+  "stop_reason": "complete"
+}
